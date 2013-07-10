@@ -3,6 +3,7 @@
  *
  * Brad Birdsall
  * Copyright 2013, MIT License
+ * uglifyjs swipe.js -o swipe.min.js -p 5 -c -m
  *
 */
 
@@ -250,6 +251,7 @@ function Swipe(container, options) {
       switch (event.type) {
         case 'touchstart': this.start(event); break;
         case 'touchmove': this.move(event); break;
+        case 'touchleave':
         case 'touchend': offloadFn(this.end(event)); break;
         case 'webkitTransitionEnd':
         case 'msTransitionEnd':
